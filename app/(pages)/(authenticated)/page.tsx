@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function LandingPage() {
   // 공통 버튼 스타일
@@ -28,10 +29,14 @@ export default function LandingPage() {
 
       {/* 버튼 2개 컨테이너 */}
       <div className="flex gap-16 mt-16">
-        <button style={blackButtonStyle}>
-          새 법정 시작하기
-        </button>
+        {/* 새 법정 시작하기 버튼 → court1 이동 */}
+        <Link href="/court1">
+          <button style={blackButtonStyle}>
+            새 법정 시작하기
+          </button>
+        </Link>
 
+        {/* 상점 반영하기 */}
         <button style={blackButtonStyle}>
           상점 반영하기
         </button>
